@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- جعل الصفحة مناسبة للهاتف -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>قائمة الطلاب</title>
+
+    <!--   ==========================================
+         ربط ملف CSS
+         ==========================================   -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+
+  <body>
+    <!--   ==========================================
+         عنوان الصفحة
+         ==========================================   -->
+
+    <h1>قائمة الطلاب</h1>
+    <!--   ==========================================
+     عرض رسائل النجاح
+     ==========================================   -->
+
+    {% with messages=get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="success-message">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <!--   ==========================================
+         مربع البحث
+         ==========================================   -->
+
+    <form action="/search" method="GET" class="search-form">
+      <input type="text" name="search" placeholder="ابحث بالاسم أو الفصل أو التخصص" />
+
+      <button type="submit">🔎 بحث</button>
+    </form>
+
+    <!--   ==========================================
+         جدول الطلاب
+         ==========================================   -->
+
+    <div class="table-container">
+      <table>
+        <!-- عناوين الأعمدة -->
+
+        <thead>
+          <tr>
+            <th>الرقم</th>
+
+            <th>اسم الطالب</th>
+
+            <th>الفصل</th>
+
+            <th>التخصص</th>
+
+            <th>التليفون</th>
+
+            <th>العنوان</th>
+
+            <th>الإجراءات</th>
+          </tr>
+        </thead>
+
+        <!-- بيانات الطلاب -->
+
+        <tbody>
+          {% for student in students %}
+            <tr>
+              <!-- الرقم -->
+
+              <td>{{ student.0 }}</td>
+
+              <!-- اسم الطالب -->
+
+              <td>{{ student.1 }}</td>
+
+              <!-- الفصل -->
+
+              <td>{{ student.2 }}</td>
+
+              <!-- التخصص -->
+
+              <td>{{ student.3 }}</td>
+
+              <!-- التليفون -->
+
+              <td>{{ student.4 }}</td>
+
+              <!-- العنوان -->
+
+              <td>{{ student.5 }}</td>
+
+              <!-- الإجراءات -->
+
+              <td class="actions">
+                <!-- تعديل -->
+
+                <a href="/edit/{{ student.0 }}" class="edit-btn">✏️ تعديل</a>
+
+                <!-- حذف -->
+
+                <a href="/delete/{{ student.0 }}" class="delete-btn" onclick="return confirm('هل أنت متأكد من حذف الطالب؟')">🗑️ حذف</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!--   ==========================================
+         روابط التنقل
+         ==========================================   -->
+
+    <div class="page-links">
+      <a href="/" class="back-btn">🏠 الصفحة الرئيسية</a>
+
+      <a href="/form" class="add-btn">➕ إضافة طالب جديد</a>
+    </div>
+    <!--  ==========================================
+     JavaScript لإخفاء رسالة النجاح
+     بعد 3 ثوانٍ
+     ==========================================  -->
+
+    <script>
+      // الحصول على رسالة النجاح
+      const message = document.querySelector('.success-message')
+      
+      // التأكد من وجود الرسالة
+      if (message) {
+        // الانتظار 3 ثوانٍ
+        setTimeout(function () {
+          // إخفاء الرسالة
+          message.style.display = 'none'
+        }, 3000)
+      }
+    </script>
+  </body>
+</html>

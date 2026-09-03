@@ -1,0 +1,470 @@
+/* ==========================================
+   إعدادات الصفحة العامة
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 30px;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f7fa8c;
+
+    color: #222;
+
+    direction: rtl;
+}
+
+
+/* ==========================================
+   العناوين
+   ========================================== */
+
+h1 {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================
+   الروابط
+   ========================================== */
+
+a {
+    text-decoration: none;
+
+    color: #0066cc;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   النماذج
+   ========================================== */
+
+form {
+    max-width: 500px;
+
+    margin: 20px auto;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ==========================================
+   عناوين الحقول
+   ========================================== */
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   حقول الإدخال
+   ========================================== */
+
+input,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   الأزرار
+   ========================================== */
+
+button {
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #0066cc;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   تأثير عند مرور الماوس
+   ========================================== */
+
+button:hover {
+    opacity: 0.83;
+}
+
+
+/* ==========================================
+   جدول الطلاب
+   ========================================== */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: white;
+
+    margin-top: 20px;
+}
+
+
+/* ==========================================
+   خلايا الجدول
+   ========================================== */
+
+th,
+td {
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   عناوين الجدول
+   ========================================== */
+
+th {
+    background-color: #0066cc;
+
+    color: white;
+}
+
+
+/* ==========================================
+   الصفوف
+   ========================================== */
+
+tr:hover {
+    background-color: #e9e1e1;
+    color:#0066cc
+}
+
+/* ==========================================
+   بطاقة عدد الطلاب
+   ========================================== */
+
+.card {
+    max-width: 400px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ==========================================
+   رقم عدد الطلاب
+   ========================================== */
+
+.card p {
+    font-size: 40px;
+
+    font-weight: bold;
+
+    margin: 10px 0;
+}
+
+
+/* ==========================================
+   قائمة العمليات
+   ========================================== */
+
+.menu {
+    max-width: 500px;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* ==========================================
+   أزرار القائمة
+   ========================================== */
+
+.menu a {
+    display: block;
+
+    padding: 15px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    color: #0066cc;
+
+    font-size: 18px;
+}
+
+/* ==========================================
+   نموذج البحث
+   ========================================== */
+
+.search-form {
+    max-width: 700px;
+
+    display: flex;
+
+    gap: 10px;
+
+    margin: 20px auto;
+}
+
+
+/* ==========================================
+   حقل البحث
+   ========================================== */
+
+.search-form input {
+    flex: 1;
+
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   الحاوية الخاصة بالجدول
+   ========================================== */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    margin-top: 25px;
+}
+
+
+/* ==========================================
+   أزرار الإجراءات
+   ========================================== */
+
+.actions {
+    white-space: nowrap;
+}
+
+
+/* زر التعديل */
+
+.edit-btn {
+    display: inline-block;
+
+    padding: 7px 10px;
+
+    background-color: #e8f2ff;
+
+    border-radius: 5px;
+}
+
+
+/* زر الحذف */
+
+.delete-btn {
+    display: inline-block;
+
+    padding: 7px 10px;
+
+    background-color: #ffe8e8;
+
+    color: #d00000;
+
+    border-radius: 5px;
+}
+
+
+/* ==========================================
+   روابط أسفل الصفحة
+   ========================================== */
+
+.page-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ==========================================
+   زر الصفحة الرئيسية
+   ========================================== */
+
+.back-btn,
+.add-btn {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    background-color: white;
+
+    border-radius: 7px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   رسالة الخطأ
+   ========================================== */
+
+.error-message {
+    max-width: 500px;
+
+    margin: 15px auto;
+
+    padding: 12px;
+
+    background-color: #ffe8e8;
+
+    color: #d00000;
+
+    text-align: center;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   نموذج الطالب
+   ========================================== */
+
+.student-form {
+    max-width: 550px;
+}
+
+
+/* ==========================================
+   تحسين زر النموذج
+   ========================================== */
+
+.student-form button {
+    width: 100%;
+
+    margin-top: 10px;
+}
+/* ==========================================
+   رسالة النجاح
+   ========================================== */
+
+.success-message {
+    max-width: 500px;
+
+    margin: 15px auto;
+
+    padding: 15px;
+
+    background-color: #e8f7e8;
+
+    color: #168316;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+/* ==========================================
+   تحسين الشاشات الصغيرة
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    .student-form {
+        padding: 20px;
+    }
+
+}
+/* ==========================================
+   تحسين الهاتف
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form button {
+        width: 100%;
+    }
+
+}
+/* ==========================================
+   تحسين الهاتف
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+}
